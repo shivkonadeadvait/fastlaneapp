@@ -15,19 +15,10 @@ android {
         applicationId = "com.fastlane.testapp"
         minSdk = 24
         targetSdk = 36
-        versionCode = 6
-        versionName = "1.0.5"
+        versionCode = 7
+        versionName = "1.0.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    signingConfigs {
-        create("release") {
-            storeFile = file(System.getProperty("android.injected.signing.store.file") ?: "")
-            storePassword = System.getProperty("android.injected.signing.store.password") ?: ""
-            keyAlias = System.getProperty("android.injected.signing.key.alias") ?: ""
-            keyPassword = System.getProperty("android.injected.signing.key.password") ?: ""
-        }
     }
 
     buildTypes {
